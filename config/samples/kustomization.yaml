@@ -1,0 +1,4 @@
+## Append samples of your project ##
+resources:
+- nettools_v1alpha1_icmpdroprule.yaml
+# +kubebuilder:scaffold:manifestskustomizesamples

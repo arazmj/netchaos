@@ -1,0 +1,9 @@
+apiVersion: nettools.amirrazmjou.com/v1alpha1
+kind: IcmpDropRule
+metadata:
+  labels:
+    app.kubernetes.io/name: netchaos
+    app.kubernetes.io/managed-by: kustomize
+  name: icmpdroprule-sample
+spec:
+  # TODO(user): Add fields here

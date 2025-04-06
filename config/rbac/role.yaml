@@ -1,11 +1,32 @@
+---
 apiVersion: rbac.authorization.k8s.io/v1
 kind: ClusterRole
 metadata:
-  labels:
-    app.kubernetes.io/name: netchaos
-    app.kubernetes.io/managed-by: kustomize
   name: manager-role
 rules:
-- apiGroups: [""]
-  resources: ["pods"]
-  verbs: ["get", "list", "watch"]
+- apiGroups:
+  - nettools.amirrazmjou.com
+  resources:
+  - icmpdroprules
+  verbs:
+  - create
+  - delete
+  - get
+  - list
+  - patch
+  - update
+  - watch
+- apiGroups:
+  - nettools.amirrazmjou.com
+  resources:
+  - icmpdroprules/finalizers
+  verbs:
+  - update
+- apiGroups:
+  - nettools.amirrazmjou.com
+  resources:
+  - icmpdroprules/status
+  verbs:
+  - get
+  - patch
+  - update
