@@ -40,8 +40,8 @@ spec:
   action: DROP
   match:
     seqMod: 5
-
-  ## Getting Started
+```
+## Getting Started
 
 ### Prerequisites
 - go version v1.23.0+
